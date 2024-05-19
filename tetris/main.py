@@ -199,7 +199,8 @@ class Tetris(object):
         return colors[shape - 1]
 
     def toggle_pause(self):
-        self.paused = not self.paused
+        if(self.game_over==False):
+            self.paused = not self.paused
 
     def stop_game(self):
         self.game_over = True
